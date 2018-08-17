@@ -1,11 +1,11 @@
+
 const path = require("path");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
-        "responsive": "./src/js/index.js",
-        "responsive.min": "./src/js/index.min.js"
+        "min_ui": "./src/js/min_ui.js"
     },
     devtool: "source-map",
     output: {
@@ -21,7 +21,7 @@ module.exports = {
             }]
         },
         {
-            test: /\.min\.scss$/,
+            test: /\.scss$/,
             use: ExtractTextPlugin.extract({
                 use: [
                     {
@@ -52,10 +52,10 @@ module.exports = {
         }]
     },
     plugins: [
-        new ExtractTextPlugin("[name].css"),
-        new UglifyJSPlugin({
-            test: /\.min\.js$/,
-            sourceMap: true
-        })
+        new ExtractTextPlugin("[name].css")
+        // new UglifyJSPlugin({
+        //     test: /\.js$/,
+        //     sourceMap: true
+        // })
     ]
 };

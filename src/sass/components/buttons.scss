@@ -1,0 +1,19 @@
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    text-decoration: none;
+
+    &:hover {
+    }
+}
+
+// Reset width for inputs
+input {
+    &[type="submit"],
+    &[type="reset"],
+    &[type="button"] {
+        max-width: none;
+        width: auto;
+    }
+}

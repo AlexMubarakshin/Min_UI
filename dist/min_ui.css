@@ -1,0 +1,11 @@
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  text-decoration: none; }
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+  max-width: none;
+  width: auto; }
+
+/*# sourceMappingURL=min_ui.css.map*/
